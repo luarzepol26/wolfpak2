@@ -9,10 +9,13 @@
 import SwiftUI
 
 struct MyGroupsListView: View {
+    
+    var groupList = GroupModel().group
     var body: some View {
         VStack {
             NavigationView{
-                List(0..<5) { item in
+                List(groupList) { item in
+
                     MyGroupsRowView()
                     Spacer()
                     

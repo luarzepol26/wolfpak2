@@ -33,6 +33,8 @@ enum Status:String {
 
 struct ListItem:Identifiable {
     var id: Int
+    var groupId: Int
+    var userId: Int
     var name: String
     var qty: Int = 1
     var category:Category = .other
@@ -70,7 +72,7 @@ class ItemModel:ObservableObject {
             print("Item #\(groupID) not found")
             return
         }
-        let itemorder = ListItem(id: newId(), name: addedItem.name, qty: quantity, category: category, DateEntered: Date(), comments: comments, status: .open)
+        let itemorder = ListItem(id: newId(), groupId: 1, userId: 1, name: addedItem.name, qty: quantity, category: category, DateEntered: Date(), comments: comments, status: .open)
         items += [itemorder]
     }
 }

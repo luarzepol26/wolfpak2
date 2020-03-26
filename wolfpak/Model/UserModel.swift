@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct UserItem:Identifiable {
+    var id:Int
+    var username:String
+    var password:String
+}
+
+let testUserModel = UserItem(id: 1, username: "zepol@bellsouth.net", password: "test33")
+
+struct UserModel {
+    var user:[UserItem] = [
+        UserItem(id: 1, username: "zepol@bellsouth.net", password: "test22")
+    ]
+}
